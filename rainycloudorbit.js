@@ -18,6 +18,7 @@ import { OrbitControls } from 'OrbitControls';
 
 			const camera = new THREE.PerspectiveCamera(60,window.innerWidth / window.innerHeight,1,1000);
 			camera.position.z = 1;
+			camera.position.y = -2;
 			camera.rotation.x = 1.16;
 			camera.rotation.y = -0.12;
 			camera.rotation.z = 0.27;
@@ -78,12 +79,12 @@ import { OrbitControls } from 'OrbitControls';
 				cloud.position.set(
 					Math.random()*800 -400,
 					500,
-					Math.random()*500 - 450
+					Math.random()*3000 - 450
 				);
 				cloud.rotation.x = 1.16;
 				cloud.rotation.y = -0.12;
 				cloud.rotation.z = Math.random()*360;
-				cloud.material.opacity = 0.10;
+				cloud.material.opacity = 0.3;
 				cloudVertices.push(cloud);
 				scene.add(cloud);
 				}})
